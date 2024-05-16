@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/s.css')}}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div >
+        <nav>
+            <img src="{{url_for('static',filename='image/Bot.svg')}}" width="25px" alt="">
+            <h1 class="title">Feel free to ask...</h1>
+        </nav>
+        
+        <div class="content">
+            <div style="margin: auto;">
+                <form action="/response" method="post">
+    
+                    <ul>
+                        <li class="label">Input:</li>
+                        <li>
+                            <input 
+                            placeholder="Ask here..."
+                            type="text" class="input_text" type="text" name="inpmes" id="inpmes"></textarea>
+                        </li>
+                        <li>
+                            <button class="askQstBtn" type="submit">Ask the question</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+    
+            <div class="row">
+                <h1>The Response is</h1>
+                <p>{{response}}</p>
+                <ul class="icons-ul">
+                    <li>
+                        <i class="fas fa-thumbs-up"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-thumbs-down"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-volume-up	" onclick="speak('{{response}}')"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- <div class="row">
+            <h1>The Chat History is</h1>
+
+            <ul class="ul">
+                <li>
+                    <span class="you">You:</span>
+                    <span>Hi</span>
+                </li>
+                <li>
+                    <span class="bot">Bot:</span>
+                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ipsum natus eum
+                        officiis voluptate, saepe similique ullam autem optio. Error unde repellendus ut aliquid
+                        assumenda porro, dolores nisi magnam deleniti?</span>
+                </li>
+            </ul>
+
+            <ul class="ul">
+                <li>
+                    <span class="you">You:</span>
+                    <span>Hi</span>
+                </li>
+                <li>
+                    <span class="bot">Bot:</span>
+                    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi autem quo odit. Quasi
+                        adipisci illo obcaecati odit. Rerum culpa quisquam exercitationem ab. Vitae quisquam iste
+                        accusamus possimus tempore natus a eos dolores temporibus, sapiente illo ut aspernatur quas
+                        nostrum! Beatae molestiae deserunt nam, culpa magnam iste quasi fuga incidunt voluptates ducimus
+                        possimus in saepe porro illum facilis, cum, explicabo reiciendis. Quos, iure repellat accusamus
+                        incidunt laboriosam officiis cupiditate velit esse, ullam nobis facere neque iste? Voluptate
+                        officiis illo rem iste laborum cumque ipsam inventore voluptates ut dolore, pariatur doloremque
+                        a quo quia dolorum suscipit id possimus. Illo rerum porro corporis.</span>
+                </li>
+            </ul>
+        </div> -->
+
+        <script>
+            const speak = (sentence) => {
+                sentence = sentence.replace(/'/g, " '$1'"); // <-- Add a closing parenthesis after '$1'
+                const utterance = new SpeechSynthesisUtterance(sentence);
+                window.speechSynthesis.speak(utterance);
+            }
+        </script>
+    </div>
+</body>
+
+</html>
