@@ -1,0 +1,46 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["My pleasure", "You're Welcome"],
+         "context": [""]
+        },
+        {"tag": "query",
+         "patterns": ["What is your name"],
+         "responses": ["I am called Chatbat. How can I assist you today?"],
+         "context": [""]
+        },
+         {
+            "tag": "joke",
+            "patterns": ["Tell me a joke", "Do you know any jokes?", "Make me laugh"],
+            "responses": ["Why donot scientists trust atoms? Because they make up everything!", "What do you get when you cross a snowman and a vampire? Frostbite."],
+            "context": [""]
+        },
+         {
+            "tag": "hours",
+            "patterns": ["What are your hours?", "When are you available?", "When can I talk to you?"],
+            "responses": ["I am available 24/7.", "You can talk to me anytime!"],
+            "context": [""]
+        },
+        {
+            "tag": "weather",
+            "patterns": ["What's the weather like?", "How's the weather?", "Is it going to rain today?"],
+            "responses": ["I cannot check the weather, but you can use a weather app or website.", "I donnot have weather information, but you can find it online easily."],
+            "context": [""]
+        },
+        {
+            "tag": "favorite_food",
+            "patterns": ["What's your favorite food?", "Do you eat?", "What do you like to eat?"],
+            "responses": ["I don't eat, but I hear pizza is popular!", "As an AI, I don't have a need for food, but I've heard good things about tacos."],
+            "context": [""]
+        } 
+    ]}
