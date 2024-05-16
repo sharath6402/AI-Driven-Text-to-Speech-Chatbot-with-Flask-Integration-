@@ -35,7 +35,7 @@ The "AI-Driven Text-to-Speech Chatbot with Flask Integration" project aims to cr
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ai-text-to-speech-chatbot.git
+git clone https://github.com/sharath6402/ai-text-to-speech-chatbot.git
 cd ai-text-to-speech-chatbot
 ```
 
